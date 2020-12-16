@@ -73,6 +73,9 @@ button {
         text-transform: uppercase;
         color: #ffffff;
         background-color: #bb6bd9;
+        &:active{
+            transform: scale(0.90);
+        }
     }
 }
 
@@ -80,32 +83,42 @@ button {
     padding-bottom: 15px;
     margin-bottom: 12px;
     position: relative;
-    border-bottom: 1px solid #1d1d1d;
+    border-bottom: 1px solid #CACACA;
 }
 
 .todo-label {
     margin-left: 10px;
 }
 
-.buttons-wrap{
+.buttons-wrap {
+    opacity: 0;
     right: 0;
     top: -10px;
     position: absolute;
+    button {
+        width: 104.25px;
+        height: 33px;
+        border-radius: 22px;
+    }
+}
+
+.todo-item{
+    &:hover{
+        .buttons-wrap{
+            transition: opacity 0.5s;
+            opacity: 1;
+        }
+    }
 }
 
 .change-button {
-    width: 104.25px;
-    height: 33px;
     left: 70px;
     top: -10px;
-    border-radius: 22px;
 }
 
 .remove-button {
-    width: 104.25px;
-    height: 33px;
+    margin-left: 9.75px;
     left: 185px;
     top: -10px;
-    border-radius: 22px;
-    background-color: #EB5757 !important;
+    background-color: #eb5757 !important;
 }
