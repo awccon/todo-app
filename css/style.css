@@ -46,7 +46,14 @@ button {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 17px; }
+  line-height: 17px;
+  padding-bottom: 15px;
+  margin-bottom: 12px;
+  position: relative;
+  border-bottom: 1px solid #cacaca; }
+  .todo-item:hover .buttons-wrap {
+    transition: opacity 0.8s;
+    opacity: 1; }
 
 .left-side {
   width: 40%; }
@@ -82,12 +89,6 @@ button {
     .left-side button:hover {
       border: 1px solid #584254; }
 
-.todo-item {
-  padding-bottom: 15px;
-  margin-bottom: 12px;
-  position: relative;
-  border-bottom: 1px solid #cacaca; }
-
 .todo-label {
   margin-left: 10px; }
 
@@ -99,10 +100,6 @@ button {
   .buttons-wrap button {
     width: 104.25px;
     height: 33px; }
-
-.todo-item:hover .buttons-wrap {
-  transition: opacity 0.8s;
-  opacity: 1; }
 
 .change-button {
   left: 70px;

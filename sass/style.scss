@@ -43,6 +43,18 @@ button {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
+
+    padding-bottom: 15px;
+    margin-bottom: 12px;
+    position: relative;
+    border-bottom: 1px solid #cacaca;
+
+    &:hover {
+        .buttons-wrap {
+            transition: opacity 0.8s;
+            opacity: 1;
+        }
+    }
 }
 
 .left-side {
@@ -75,7 +87,7 @@ button {
         background-color: #bb6bd9;
         border-radius: 22px;
         border: 1px solid transparent;
-        &:active{
+        &:active {
             transition: 0.2s;
             transform: scale(0.9);
         }
@@ -83,13 +95,6 @@ button {
             border: 1px solid rgb(88, 66, 84);
         }
     }
-}
-
-.todo-item {
-    padding-bottom: 15px;
-    margin-bottom: 12px;
-    position: relative;
-    border-bottom: 1px solid #cacaca;
 }
 
 .todo-label {
@@ -104,15 +109,6 @@ button {
     button {
         width: 104.25px;
         height: 33px;
-    }
-}
-
-.todo-item {
-    &:hover {
-        .buttons-wrap {
-            transition: opacity 0.8s;
-            opacity: 1;
-        }
     }
 }
 
@@ -197,11 +193,11 @@ button {
         letter-spacing: 0.0357143em;
 
         color: #bb6bd9;
-        &:active{
+        &:active {
             transition: 0.2s;
             transform: scale(0.9);
         }
-        &:hover{
+        &:hover {
             border: 1px solid #1a1a1a;
         }
     }
