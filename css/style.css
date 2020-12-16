@@ -35,21 +35,13 @@ button {
   width: 100%; }
 
 .todo-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 35px 26px 35px 51px; }
 
 .todo-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
@@ -85,10 +77,8 @@ button {
     border-radius: 22px;
     border: 1px solid transparent; }
     .left-side button:active {
-      -webkit-transition: 0.2s;
       transition: 0.2s;
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9); }
+      transform: scale(0.9); }
     .left-side button:hover {
       border: 1px solid #584254; }
 
@@ -111,7 +101,6 @@ button {
     height: 33px; }
 
 .todo-item:hover .buttons-wrap {
-  -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
   opacity: 1; }
 
@@ -125,7 +114,7 @@ button {
   top: -10px;
   background-color: #eb5757 !important; }
 
-.add-work-btn {
+.add-button {
   width: 139px;
   height: 44px;
   margin-top: 32px; }
@@ -134,14 +123,12 @@ button {
   width: 57%; }
 
 .input-block {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 599px;
   padding: 25.44px 28px;
   background: #fafafa;
-  -webkit-box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
   border-radius: 2px; }
   .input-block h2 {
     font-family: Montserrat;
@@ -155,35 +142,13 @@ button {
     margin-bottom: 25.56px;
     width: 320px;
     height: 44px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px; }
     .input-block input:focus {
       outline: none; }
-    .input-block input::-webkit-input-placeholder {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      color: rgba(31, 32, 65, 0.25); }
-    .input-block input:-ms-input-placeholder {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      color: rgba(31, 32, 65, 0.25); }
-    .input-block input::-ms-input-placeholder {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      color: rgba(31, 32, 65, 0.25); }
     .input-block input::placeholder {
       font-family: Montserrat;
       font-style: normal;
@@ -207,10 +172,8 @@ button {
     letter-spacing: 0.0357143em;
     color: #bb6bd9; }
     .input-block button:active {
-      -webkit-transition: 0.2s;
       transition: 0.2s;
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9); }
+      transform: scale(0.9); }
     .input-block button:hover {
       border: 1px solid #1a1a1a; }
 
