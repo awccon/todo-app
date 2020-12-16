@@ -1,0 +1,112 @@
+@import "fonts.scss";
+
+body {
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.todo-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 26px 0 51px;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: left;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.left-side {
+    h1 {
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+    }
+    h4 {
+        margin-top: 9px;
+        margin-bottom: 27px;
+        font-family: PTSans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    button {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 9px;
+        line-height: 11px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #bb6bd9;
+    }
+}
+
+.todo-item {
+    padding-bottom: 15px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.todo-label {
+    margin-left: 10px;
+}
+
+.buttons-wrap {
+    position: absolute;
+    width: 230px;
+    left: 183px;
+    top: -10px;
+}
+
+.change-button {
+    // position: absolute;
+    width: 104.25px;
+    height: 33px;
+    left: 70px;
+    top: -10px;
+    border-radius: 22px;
+}
+
+.remove-button {
+    // position: absolute;
+    width: 104.25px;
+    height: 33px;
+    left: 185px;
+    top: -10px;
+    border-radius: 22px;
+    background-color: #EB5757 !important;
+}
