@@ -103,11 +103,14 @@ button {
   .buttons-wrap button {
     width: 104.25px;
     height: 33px;
-    border-radius: 22px; }
+    border-radius: 22px;
+    border: 1px solid transparent; }
+    .buttons-wrap button:hover {
+      border: 1px solid #584254; }
 
 .todo-item:hover .buttons-wrap {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity .8s;
+  transition: opacity .8s;
   opacity: 1; }
 
 .change-button {

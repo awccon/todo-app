@@ -99,13 +99,17 @@ button {
         width: 104.25px;
         height: 33px;
         border-radius: 22px;
+        border: 1px solid transparent;
+        &:hover{
+            border: 1px solid rgb(88, 66, 84);
+        }
     }
 }
 
 .todo-item{
     &:hover{
         .buttons-wrap{
-            transition: opacity 0.5s;
+            transition: opacity .8s;
             opacity: 1;
         }
     }
