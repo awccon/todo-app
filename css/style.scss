@@ -46,6 +46,7 @@ button {
 }
 
 .left-side {
+    width: 500px;
     h1 {
         font-family: Quicksand;
         font-style: normal;
@@ -79,21 +80,20 @@ button {
     padding-bottom: 15px;
     margin-bottom: 12px;
     position: relative;
+    border-bottom: 1px solid #1d1d1d;
 }
 
 .todo-label {
     margin-left: 10px;
 }
 
-.buttons-wrap {
-    position: absolute;
-    width: 230px;
-    left: 183px;
+.buttons-wrap{
+    right: 0;
     top: -10px;
+    position: absolute;
 }
 
 .change-button {
-    // position: absolute;
     width: 104.25px;
     height: 33px;
     left: 70px;
@@ -102,7 +102,6 @@ button {
 }
 
 .remove-button {
-    // position: absolute;
     width: 104.25px;
     height: 33px;
     left: 185px;

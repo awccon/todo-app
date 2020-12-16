@@ -56,44 +56,46 @@ button {
   font-size: 14px;
   line-height: 17px; }
 
-.left-side h1 {
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 60px; }
-.left-side h4 {
-  margin-top: 9px;
-  margin-bottom: 27px;
-  font-family: PTSans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px; }
-.left-side button {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 9px;
-  line-height: 11px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #bb6bd9; }
+.left-side {
+  width: 500px; }
+  .left-side h1 {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px; }
+  .left-side h4 {
+    margin-top: 9px;
+    margin-bottom: 27px;
+    font-family: PTSans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px; }
+  .left-side button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #bb6bd9; }
 
 .todo-item {
   padding-bottom: 15px;
   margin-bottom: 12px;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #1d1d1d; }
 
 .todo-label {
   margin-left: 10px; }
 
 .buttons-wrap {
-  position: absolute;
-  width: 230px;
-  left: 183px;
-  top: -10px; }
+  right: 0;
+  top: -10px;
+  position: absolute; }
 
 .change-button {
   width: 104.25px;
