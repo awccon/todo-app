@@ -1,7 +1,7 @@
 @import "fonts.scss";
 
 body {
-    background-color: #e5e5e5;
+    background-color: #FAFAFA;
     margin: 0;
     padding: 0;
 }
@@ -46,7 +46,7 @@ button {
 }
 
 .left-side {
-    width: 500px;
+    width: 40%;
     h1 {
         font-family: Quicksand;
         font-style: normal;
@@ -73,8 +73,13 @@ button {
         text-transform: uppercase;
         color: #ffffff;
         background-color: #bb6bd9;
-        &:active{
-            transform: scale(0.90);
+        border-radius: 22px;
+        border: 1px solid transparent;
+        &:active {
+            transform: scale(0.9);
+        }
+        &:hover {
+            border: 1px solid rgb(88, 66, 84);
         }
     }
 }
@@ -83,7 +88,7 @@ button {
     padding-bottom: 15px;
     margin-bottom: 12px;
     position: relative;
-    border-bottom: 1px solid #CACACA;
+    border-bottom: 1px solid #cacaca;
 }
 
 .todo-label {
@@ -98,18 +103,13 @@ button {
     button {
         width: 104.25px;
         height: 33px;
-        border-radius: 22px;
-        border: 1px solid transparent;
-        &:hover{
-            border: 1px solid rgb(88, 66, 84);
-        }
     }
 }
 
-.todo-item{
-    &:hover{
-        .buttons-wrap{
-            transition: opacity .8s;
+.todo-item {
+    &:hover {
+        .buttons-wrap {
+            transition: opacity 0.8s;
             opacity: 1;
         }
     }
@@ -125,4 +125,24 @@ button {
     left: 185px;
     top: -10px;
     background-color: #eb5757 !important;
+}
+
+.add-work-btn {
+    width: 139px;
+    height: 44px;
+    margin-top: 32px;
+}
+
+// ============= //
+
+.right-side{
+    width: 57%;
+}
+
+.input-block {
+    width: 100%;
+    height: 599px;
+    background: #fafafa;
+    box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
 }
