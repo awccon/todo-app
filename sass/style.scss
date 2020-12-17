@@ -37,22 +37,19 @@ button {
 
 .todo-item {
     display: flex;
-    justify-content: left;
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
 
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     margin-bottom: 12px;
-    position: relative;
     border-bottom: 1px solid #cacaca;
 
     &:hover {
         .buttons-wrap {
-            transition: opacity 0.8s;
-            opacity: 1;
+            display: flex;
         }
     }
 }
@@ -97,15 +94,18 @@ button {
     }
 }
 
-.todo-label {
-    margin-left: 10px;
+.todo-count {
+    margin-right: 10px;
 }
 
+.todo-label {
+    width: 100%;
+}
+
+/* BUTTON STYLES */
 .buttons-wrap {
-    opacity: 0;
-    right: 0;
-    top: -10px;
-    position: absolute;
+    display: none;
+    margin-top: -9px;
     button {
         width: 104.25px;
         height: 33px;
