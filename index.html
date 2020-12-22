@@ -21,10 +21,10 @@
                 <h4>Добавляете и редактируйте списки дел</h4>
                 <div class="todo-list">
                     <div class="todo-item" v-for="(item, index) in todoList">
-                        <span class="todo-count">{{item.count}}.</span>
+                        <span class="todo-count">{{index + 1}}.</span>
                         <div class="todo-label">{{item.todo}}</div>
                         <div class="buttons-wrap">
-                            <button class="change-button" @click='changeBtn(item.count)'>Изменить</button>
+                            <button class="change-button" @click='changeBtn(index + 1)'>Изменить</button>
                             <button class="remove-button" @click='removeTodo(item.count)'>Удалить</button>
                         </div>
                     </div>
@@ -54,7 +54,6 @@
             el: ".todo-wrap",
             data: {
                 todoList: [{
-                    count: 1,
                     todo: 'Сделать адаптивный дизайн'
                 }],
                 inputValue: '',
@@ -71,7 +70,6 @@
                         let todoCount = this.todoList.length + 1;
                         if (this.inputValue.trim()) {
                             this.todoList.push({
-                                count: todoCount,
                                 todo: this.inputValue,
                             });
                             this.inputValue = '';
@@ -96,7 +94,7 @@
 
                 removeTodo(e) {
                     let todoCount = e - 1;
-                    this.todoList.splice(todoCount, todoCount);
+                    delete this.todoList(todoCount);
                 }
             }
         })
