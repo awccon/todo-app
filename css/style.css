@@ -46,8 +46,8 @@ button {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
+  padding-top: 12px;
   padding-bottom: 5px;
-  margin-bottom: 12px;
   border-bottom: 1px solid #cacaca; }
   .todo-item:hover .buttons-wrap {
     display: flex; }
@@ -94,6 +94,8 @@ button {
 
 /* BUTTON STYLES */
 .buttons-wrap {
+  width: 223px;
+  height: 33px;
   display: none;
   margin-top: -9px; }
   .buttons-wrap button {

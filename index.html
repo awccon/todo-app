@@ -10,9 +10,12 @@
 </head>
 
 <body>
-
+    <!-- Container -->
     <div class="container">
+        <!-- todo wrap -->
         <div class="todo-wrap">
+
+            <!-- left side -->
             <div class="left-side">
                 <h1>Список дел</h1>
                 <h4>Добавляете и редактируйте списки дел</h4>
@@ -25,39 +28,45 @@
                             <button class="remove-button">Удалить</button>
                         </div>
                     </div>
-                    <div class="todo-item">
-                        <span class="todo-count">2.</span>
-                        <div class="todo-label">Сверстать макет Сверстать макет Сверстать макет Сверстать макет
-                        </div>
-                        <div class="buttons-wrap">
-                            <button class="change-button">Изменить</button>
-                            <button class="remove-button">Удалить</button>
-                        </div>
-                    </div>
-                    <div class="todo-item">
-                        <span class="todo-count">3.</span>
-                        <div class="todo-label">Сходить на тренировку
-                        </div>
-                        <div class="buttons-wrap">
-                            <button class="change-button">Изменить</button>
-                            <button class="remove-button">Удалить</button>
-                        </div>
-                    </div>
-
                 </div>
-                <button class="add-button">Добавить дело</button>
+                <button class="add-button" v-on:click='inputVisible = !inputVisible'>Добавить дело</button>
             </div>
-            <div class="right-side">
+
+            <div class="right-side" v-if='inputVisible'>
                 <div class="input-block">
                     <h2>Что нужно сделать?</h2>
                     <input type="text" placeholder="Побегать вечером">
                     <button class="save-button">СОХРАНИТЬ</button>
                 </div>
             </div>
+
         </div>
+
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script>
+
+        new Vue({
+            el: ".todo-wrap",
+            data: {
+                todoList: [],
+                todoInput: '',
+                inputVisible: false
+            },
+
+            // methods: {
+            //     showInputBlock: () => {
+            //         inputVisible = true
+            //     },
+            //     hideInputBlock: () => {
+            //         inputVisible = false
+            //     }
+            // }
+        })
+
+
+    </script>
 
 </body>
 
