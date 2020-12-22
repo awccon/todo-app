@@ -92,10 +92,12 @@
                     this.todoNum = todoCount;
                 },
 
-                // removeTodo(e) {
-                //     let todoCount = e - 1;
-                //     delete this.todoList(todoCount);
-                // }
+                removeTodo(e) {
+                    let todoCount = e - 1;
+                    delete this.todoList[todoCount];
+                    console.log('delete btn was clicked');
+                    
+                }
             }
         })
 
