@@ -53,7 +53,8 @@ button {
     display: flex; }
 
 .left-side {
-  width: 40%; }
+  width: 40%;
+  margin: 0 auto; }
   .left-side h1 {
     font-family: Quicksand;
     font-style: normal;
