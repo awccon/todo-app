@@ -15,7 +15,7 @@
         <!-- todo wrap -->
         <div class="todo-wrap">
 
-            <!-- left side -->
+            <!-- Main content -->
             <div class="left-side">
                 <h1>Список дел</h1>
                 <h4>Добавляете и редактируйте списки дел</h4>
@@ -32,11 +32,12 @@
                 <button class="add-button" v-on:click='inputVisible = !inputVisible'>Добавить дело</button>
             </div>
 
+            <!-- Input block -->
             <div class="right-side" v-if='inputVisible'>
                 <div class="input-block">
                     <h2>Что нужно сделать?</h2>
-                    <input type="text" placeholder="Побегать вечером">
-                    <button class="save-button">СОХРАНИТЬ</button>
+                    <input type="text" placeholder="Побегать вечером" v-on:input='inputValue = $event.target.value'>
+                    <button class="save-button" @click='addTodoList()'>СОХРАНИТЬ</button>
                 </div>
             </div>
 
@@ -51,18 +52,17 @@
             el: ".todo-wrap",
             data: {
                 todoList: [],
-                todoInput: '',
-                inputVisible: false
+                inputValue: 'something',
+                inputVisible: false,
             },
 
-            // methods: {
-            //     showInputBlock: () => {
-            //         inputVisible = true
-            //     },
-            //     hideInputBlock: () => {
-            //         inputVisible = false
-            //     }
-            // }
+            methods: {
+                addTodoList: () => {
+                    console.log(inputValue);
+                }
+                // changeTodo: () => {
+                // }
+            }
         })
 
 
