@@ -20,9 +20,9 @@
                 <h1>Список дел</h1>
                 <h4>Добавляете и редактируйте списки дел</h4>
                 <div class="todo-list">
-                    <div class="todo-item">
-                        <span class="todo-count">1.</span>
-                        <div class="todo-label">Доделать регистрацию</div>
+                    <div class="todo-item" v-for="(item, index) in todoList">
+                        <span class="todo-count">{{item.count}}.</span>
+                        <div class="todo-label">{{item.todo}}</div>
                         <div class="buttons-wrap">
                             <button class="change-button">Изменить</button>
                             <button class="remove-button">Удалить</button>
@@ -36,7 +36,7 @@
             <div class="right-side" v-if='inputVisible'>
                 <div class="input-block">
                     <h2>Что нужно сделать?</h2>
-                    <input type="text" placeholder="Побегать вечером" v-on:input='inputValue = $event.target.value'>
+                    <input type="text" placeholder="Побегать вечером" v-model="inputValue">
                     <button class="save-button" @click='addTodoList()'>СОХРАНИТЬ</button>
                 </div>
             </div>
@@ -51,14 +51,25 @@
         new Vue({
             el: ".todo-wrap",
             data: {
-                todoList: [],
-                inputValue: 'something',
+                todoList: [{
+                    count: 1,
+                    todo: 'Сделать адаптивную верстку'
+                }],
+                inputValue: '',
                 inputVisible: false,
             },
 
             methods: {
-                addTodoList: () => {
-                    console.log(inputValue);
+                addTodoList() {
+                    let todoCount = this.todoList.length;
+                    if (this.inputValue.trim()) {
+                        this.todoList.push({
+                            count: todoCount,
+                            todo: this.inputValue,
+                        });
+                        this.inputValue = '';
+                    }
+                    this.inputVisible = false
                 }
                 // changeTodo: () => {
                 // }
