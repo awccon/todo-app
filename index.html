@@ -24,7 +24,7 @@
                         <span class="todo-count">{{item.count}}.</span>
                         <div class="todo-label">{{item.todo}}</div>
                         <div class="buttons-wrap">
-                            <button class="change-button">Изменить</button>
+                            <button class="change-button" @click='changeTodoList()'>Изменить</button>
                             <button class="remove-button">Удалить</button>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
 
             methods: {
                 addTodoList() {
-                    let todoCount = this.todoList.length;
+                    let todoCount = this.todoList.length + 1;
                     if (this.inputValue.trim()) {
                         this.todoList.push({
                             count: todoCount,
@@ -70,9 +70,10 @@
                         this.inputValue = '';
                     }
                     this.inputVisible = false
+                },
+                changeTodoList() {
+                    this.inputVisible = true
                 }
-                // changeTodo: () => {
-                // }
             }
         })
 
