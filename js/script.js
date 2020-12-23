@@ -6,44 +6,57 @@ new Vue({
             todo: 'Сделать адаптивный дизайн'
         }],
         inputValue: '',
-        inputVisible: false,
-        changeBtnWasClicked: false,
-        addBtnWasClicked: false,
+        isOpen: false,
+        isEdit: false,
         todoNum: 0
     },
 
     methods: {
-        addChangeTodo() {
-            if (this.addBtnWasClicked == true) {
-                let todoCount = this.todoList.length + 1;
-                if (this.inputValue.trim()) {
-                    this.todoList.push({
-                        todo: this.inputValue,
-                    });
-                    this.inputValue = '';
-                }
-                this.inputVisible = false
-                this.addBtnWasClicked = false
+        saveButton() {
+            if (this.isEdit == false) {
+                this.addTodo();
             }
-            if (this.changeBtnWasClicked) {
-                this.todoList[this.todoNum].todo = this.inputValue;
-                this.inputVisible = false;
-                this.inputValue = ''
-                this.changeBtnWasClicked = false
+            else {
+                this.editTodo();
             }
-        },
-        changeBtn(e) {
-            let todoCount = e - 1
-            this.changeBtnWasClicked = true;
-            this.inputVisible = true;
-            this.inputValue = this.todoList[todoCount].todo;
-            this.todoNum = todoCount;
         },
 
-        removeTodo(e) {
-            let todoCount = e - 1;
-            this.todoList.splice(todoCount, 1);
-            console.log('delete btn was clicked');
+        // Todo save
+        addTodo() {
+            let todoCount = this.todoList.length + 1;
+            if (this.inputValue.trim()) {
+                this.todoList.push({
+                    todo: this.inputValue,
+                });
+                this.inputValue = '';
+            }
+            this.isOpen = false;
+        },
+
+        // Todo edit
+        editTodo() {
+            this.todoList[this.todoNum].todo = this.inputValue;
+            this.inputValue = ''
+            this.isOpen = false
+        },
+
+        // remove todo list
+        removeTodo(index) {
+            this.todoList.splice(index, 1);
+        },
+
+        // Edit todo list button
+        todoEditBtn(index) {
+            this.isOpen = true;
+            this.isEdit = true;
+            this.inputValue = this.todoList[index].todo;
+            this.todoNum = index;
+        },
+
+        // Add todo list button
+        todoAddBtn() {
+            this.isOpen = true;
+            this.isEdit = false
         }
     }
 })

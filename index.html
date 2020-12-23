@@ -26,24 +26,25 @@
                         <span class="todo-count">{{index + 1}}.</span>
                         <div class="todo-label">{{item.todo}}</div>
                         <div class="buttons-wrap">
-                            <button class="change-button" @click='changeBtn(index + 1)'>Изменить</button>
-                            <button class="remove-button" @click='removeTodo(index + 1)'>Удалить</button>
+                            <button class="change-button" @click='todoEditBtn(index)'>Изменить</button>
+                            <button class="remove-button" @click='removeTodo(index)'>Удалить</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- todo add button -->
                 <button class="add-button"
-                    v-on:click='addBtnWasClicked = !addBtnWasClicked, inputVisible = !inputVisible'>Добавить
+                    @click='todoAddBtn()'>Добавить
                     дело</button>
             </div>
 
             <!-- Input block -->
-            <div class="right-side" v-if='inputVisible'>
+            <div class="right-side" v-if='isOpen'>
                 <div class="input-block">
                     <h2>Что нужно сделать?</h2>
-                    <input type="text" placeholder="Побегать вечером" v-model="inputValue">
-                    <button class="save-button" @click='addChangeTodo()'>СОХРАНИТЬ</button>
+                    <input type="text" placeholder="Побегать вечером" v-model="inputValue"
+                        @keyup.enter="saveButton()">
+                    <button class="save-button" @click='saveButton()'>СОХРАНИТЬ</button>
                 </div>
             </div>
 
