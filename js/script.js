@@ -23,7 +23,6 @@ new Vue({
 
         // Todo save
         addTodo() {
-            let todoCount = this.todoList.length + 1;
             if (this.inputValue.trim()) {
                 this.todoList.push({
                     todo: this.inputValue,
@@ -36,13 +35,17 @@ new Vue({
         // Todo edit
         editTodo() {
             this.todoList[this.todoNum].todo = this.inputValue;
-            this.inputValue = ''
-            this.isOpen = false
+            this.inputValue = '';
+            this.isOpen = false;
         },
 
         // remove todo list
         removeTodo(index) {
             this.todoList.splice(index, 1);
+            if(this.isOpen){
+                this.isOpen = false;
+                this.inputValue = '';
+            }
         },
 
         // Edit todo list button
