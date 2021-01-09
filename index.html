@@ -17,21 +17,22 @@
 
             <!-- Main content -->
             <app-left-side @add='todoAddBtn()'>
-                <app-todo-list 
-                    v-for="(item, index) in todoList" 
-                    :id='index' 
-                    :item='item.todo'
-                    @change='todoEditBtn(index)' 
-                    @remove='removeTodo(index)'>
-                </app-todo-list>
+                    <app-todo-list 
+                        v-for="(item, index) in todoList" 
+                        :id='index' 
+                        :item='item.todo'
+                        @change='todoEditBtn(index)' 
+                        @remove='removeTodo(index)'>
+                    </app-todo-list>
             </app-left-side>
 
-            <app-right-side 
-                @save='saveButton()'
-                v-if="isOpen"
-                v-model="inputValue"
-            ></app-right-side>
-
+            <transition name='fade'>
+                <app-right-side 
+                    @save='saveButton()'
+                    v-if="isOpen"
+                    v-model="inputValue"
+                ></app-right-side>
+            </transition>
 
 
             <!-- <div class="left-side">
