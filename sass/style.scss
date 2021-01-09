@@ -1,9 +1,9 @@
-@import "fonts.scss";
+@import "fonts";
 
 body {
-    background-color: #fafafa;
-    margin: 0;
-    padding: 0;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -12,195 +12,209 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    border: none;
-    background-color: none;
-    &:focus {
-        outline: none;
-    }
+  border: none;
+  background-color: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.todo-wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 35px 26px 35px 51px;
+#todo-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 26px 35px 51px;
 }
 
 .todo-item {
-    display: flex;
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    padding-top: 12px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #cacaca;
+  display: flex;
+  font-family: Quicksand, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cacaca;
 
-    &:hover {
-        .buttons-wrap {
-            display: flex;
-        }
+  &:hover {
+    .buttons-wrap {
+      display: flex;
     }
+  }
 }
 
 .left-side {
-    width: 40%;
-    margin: 0 auto;
-    h1 {
-        font-family: Quicksand;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 60px;
+  width: 40%;
+  margin: 0 auto;
+
+  h1 {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  h4 {
+    margin-top: 9px;
+    margin-bottom: 27px;
+    font-family: PTSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  button {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #bb6bd9;
+    border-radius: 22px;
+    border: 1px solid transparent;
+
+    &:active {
+      transition: 0.2s;
+      transform: scale(0.9);
     }
-    h4 {
-        margin-top: 9px;
-        margin-bottom: 27px;
-        font-family: PTSans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
+
+    &:hover {
+      border: 1px solid rgb(88, 66, 84);
     }
-    button {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 9px;
-        line-height: 11px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #ffffff;
-        background-color: #bb6bd9;
-        border-radius: 22px;
-        border: 1px solid transparent;
-        &:active {
-            transition: 0.2s;
-            transform: scale(0.9);
-        }
-        &:hover {
-            border: 1px solid rgb(88, 66, 84);
-        }
-    }
+  }
 }
 
 .todo-count {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .todo-label {
-    width: 100%;
+  width: 100%;
 }
 
 /* BUTTON STYLES */
 .buttons-wrap {
-    width: 223px;
+  width: 223px;
+  height: 33px;
+  display: none;
+  margin-top: -9px;
+
+  button {
+    width: 104.25px;
     height: 33px;
-    display: none;
-    margin-top: -9px;
-    button {
-        width: 104.25px;
-        height: 33px;
-    }
+  }
 }
 
 .change-button {
-    left: 70px;
-    top: -10px;
+  left: 70px;
+  top: -10px;
 }
 
 .remove-button {
-    margin-left: 9.75px;
-    left: 185px;
-    top: -10px;
-    background-color: #eb5757 !important;
+  margin-left: 9.75px;
+  left: 185px;
+  top: -10px;
+  background-color: #eb5757 !important;
 }
 
 .add-button {
-    width: 139px;
-    height: 44px;
-    margin-top: 32px;
+  width: 139px;
+  height: 44px;
+  margin-top: 32px;
 }
 
 // ============= //
 
 .right-side {
-    width: 57%;
+  width: 57%;
 }
 
 .input-block {
+  box-sizing: border-box;
+  width: 100%;
+  height: 599px;
+  padding: 25.44px 28px;
+  background: #fafafa;
+  box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+
+  h2 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 13px;
+  }
+
+  input {
+    &:focus {
+      outline: none;
+    }
+
+    padding: 11px 0 9px 20px;
+    margin-bottom: 25.56px;
+    width: 320px;
+    height: 44px;
     box-sizing: border-box;
-    width: 100%;
-    height: 599px;
-    padding: 25.44px 28px;
-    background: #fafafa;
-    box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &::placeholder {
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.25);
+    }
+  }
+
+  button {
+    display: block;
+    width: 114.35px;
+    height: 36px;
+
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
     border-radius: 2px;
-    h2 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        margin-bottom: 13px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.0357143em;
+
+    color: #bb6bd9;
+
+    &:active {
+      transition: 0.2s;
+      transform: scale(0.9);
     }
-    input {
-        &:focus {
-            outline: none;
-        }
-        padding: 11px 0 9px 20px;
-        margin-bottom: 25.56px;
-        width: 320px;
-        height: 44px;
-        box-sizing: border-box;
 
-        background: #ffffff;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
-        &::placeholder {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(31, 32, 65, 0.25);
-        }
+    &:hover {
+      border: 1px solid #1a1a1a;
     }
-    button {
-        display: block;
-        width: 114.35px;
-        height: 36px;
-
-        background: #ffffff;
-        border: 1px solid #dbdbdb;
-        border-radius: 2px;
-
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        letter-spacing: 0.0357143em;
-
-        color: #bb6bd9;
-        &:active {
-            transition: 0.2s;
-            transform: scale(0.9);
-        }
-        &:hover {
-            border: 1px solid #1a1a1a;
-        }
-    }
+  }
 }

@@ -6,47 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="todo-list">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Todo-app</title>
 </head>
 
 <body>
     <!-- Container -->
     <div class="container">
         <!-- todo wrap -->
-        <div class="todo-wrap">
+        <div id="todo-wrap">
 
             <!-- Main content -->
-            <div class="left-side">
+            <app-left-side @add='todoAddBtn()'>
+                <app-todo-list 
+                    v-for="(item, index) in todoList" 
+                    :id='index' 
+                    :item='item.todo'
+                    @change='todoEditBtn(index)' 
+                    @remove='removeTodo(index)'>
+                </app-todo-list>
+            </app-left-side>
+
+            <app-right-side 
+                @save='saveButton()'
+                v-if="isOpen"
+                v-model="inputValue"
+            ></app-right-side>
+
+
+
+            <!-- <div class="left-side">
                 <h1>Список дел</h1>
                 <h4>Добавляете и редактируйте списки дел</h4>
 
-                <!-- todo list -->
                 <div class="todo-list">
                     <div class="todo-item" v-for="(item, index) in todoList">
                         <span class="todo-count">{{index + 1}}.</span>
                         <div class="todo-label">{{item.todo}}</div>
                         <div class="buttons-wrap">
-                            <button class="change-button" @click='todoEditBtn(index)'>Изменить</button>
-                            <button class="remove-button" @click='removeTodo(index)'>Удалить</button>
+                            <button class="change-button" @click="todoEditBtn(index)">Изменить</button>
+                            <button class="remove-button" @click="removeTodo(index)">Удалить</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- todo add button -->
-                <button class="add-button"
-                    @click='todoAddBtn()'>Добавить
-                    дело</button>
-            </div>
-
+                <button class="add-button" @click='todoAddBtn()'>Добавить
+                    дело
+                </button>
+            </div> -->
             <!-- Input block -->
-            <div class="right-side" v-if='isOpen'>
+            <!-- <div class="right-side" v-if='isOpen'>
                 <div class="input-block">
                     <h2>Что нужно сделать?</h2>
-                    <input type="text" placeholder="Побегать вечером" v-model="inputValue"
-                        @keyup.enter="saveButton()">
+                    <input type="text" placeholder="Побегать вечером" v-model="inputValue" @keyup.enter="saveButton()">
                     <button class="save-button" @click='saveButton()'>СОХРАНИТЬ</button>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
